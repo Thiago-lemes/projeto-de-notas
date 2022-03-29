@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import CardNota from "./CardNotas";
+import CardNota from "./CardNota/CardNotas";
 
 class ListaDeNotas extends Component {
   render() {
       ///foi preciso criar um array para intregar como o Js, no vetor foi defenido o nome de cada categoria
     return <ul>
-        {Array.of("Trabalho", "Trampo", "Estudos").map((categoria) =>{
+        {Array.of("Trabalho", "Trampo", "Estudos").map((categoria, index) =>{
         return(
-            <li>
+            <li key={index}>
                 <div>{categoria}</div>
                 <CardNota/>
             </li>
