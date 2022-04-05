@@ -6,7 +6,7 @@ class ListaDeNotas extends Component {
   render() {
       ///foi preciso criar um array para intregar como o Js, no vetor foi defenido o nome de cada categoria
     return <ul className="lista-notas">
-        {Array.of("Trabalho", "Trampo", "Estudos").map((categoria, index) =>{
+        {this.props.notas.map((nota, index) =>{
         return(
             <li className="lista-notas_item" key={index}>
                 <CardNota/>
